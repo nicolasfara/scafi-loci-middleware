@@ -7,6 +7,9 @@ ThisBuild / version          := "0.1.0-SNAPSHOT"
 
 ThisBuild / semanticdbEnabled := true
 
+lazy val startupTransition: State => State = "conventionalCommits" :: _
+Global / onLoad := startupTransition compose (Global / onLoad).value
+
 resolvers += "jitpack" at "https://jitpack.io"
 
 lazy val root = (project in file("."))

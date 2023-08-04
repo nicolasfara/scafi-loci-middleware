@@ -3,6 +3,7 @@ echo "Publish command here"
 `;
 
 const config = require('semantic-release-preconfigured-conventional-commits');
+config.branches = ["main"]
 config.plugins.push(
     [
         "@semantic-release/exec",

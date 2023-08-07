@@ -55,9 +55,7 @@ jobs:
   success:
     runs-on: ubuntu-latest
     needs:
-      - scalafix
-      - scalafmt
-      - tests
+      - build
       - release
     if: >-
       ${{

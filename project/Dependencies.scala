@@ -3,8 +3,12 @@ import sbt.*
 object Dependencies {
   val scalaLociVersion = "130f6d7259"
   val scafiVersion = "1.1.6"
+  val scalaTestVersion = "3.2.16"
 
-    lazy val munit = "org.scalameta" %% "munit" % "0.7.29"
+  lazy val munit = "org.scalameta" %% "munit" % "0.7.29"
+
+  lazy val scalactic = "org.scalactic" %% "scalactic" % scalaTestVersion
+  lazy val scalaTest = "org.scalatest" %% "scalatest" % scalaTestVersion % "test"
 
   lazy val lociLanguage = "io.github.scala-loci.scala-loci" %% "scala-loci-language" % scalaLociVersion % "provided"
   lazy val lociRuntime = "io.github.scala-loci.scala-loci" %% "scala-loci-language-runtime" % scalaLociVersion

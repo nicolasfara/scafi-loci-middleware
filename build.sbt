@@ -1,6 +1,7 @@
 import Dependencies._
 
 ThisBuild / scalaVersion     := "2.13.11"
+ThisBuild / scalaVersion     := "2.13.11"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
 //ThisBuild / organization     := "com.example"
 //ThisBuild / organizationName := "example"
@@ -18,6 +19,8 @@ lazy val root = (project in file("."))
     scalacOptions ++= Seq("-feature", "-deprecation", "-unchecked", "-Xlint", "-Ymacro-annotations", "-Ywarn-unused"),
     libraryDependencies ++= Seq(
       munit % Test,
+      scalactic,
+      scalaTest,
       lociLanguage,
       lociRuntime,
       lociTransmitter,
